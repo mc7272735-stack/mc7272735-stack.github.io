@@ -1,0 +1,2 @@
+Replace profile-placeholder.svg with your portrait, and place your CV here as cv.pdf.
+Album photographs may also be stored in this folder.
