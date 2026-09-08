@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mc7272735-stack.github.io/sitemap.xml
