@@ -10,7 +10,7 @@ academic-homepage-template/
 ├── style.css
 ├── publications/
 │   └── index.html
-├── exploratory-research/
+├── miscellaneous/
 │   └── index.html
 ├── academic-activities/
 │   └── index.html
@@ -26,7 +26,7 @@ academic-homepage-template/
 
 1. Education
 2. Preprints & Publications
-3. Exploratory Research
+3. Miscellaneous
 4. Academic Activities
 5. Teaching
 
@@ -43,7 +43,7 @@ Album 不在学术内容容器中，而是在页面最下方用一个紧凑入�
 
 ## 首页精选条目
 
-`Preprints & Publications` 和 `Exploratory Research` 都使用：
+`Preprints & Publications` 和 `Miscellaneous` 都使用：
 
 ```html
 <div class="showcase-list">
