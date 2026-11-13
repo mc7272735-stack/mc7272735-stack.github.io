@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Miscellaneous projects and small studies.">
+    <meta name="description" content="Mathematical notes, explorations, and resources.">
     <title>Miscellaneous · Marcus Chen</title>
     <link rel="stylesheet" href="../style.css">
   </head>
@@ -13,51 +13,103 @@
         <a class="wordmark" href="../index.html" aria-label="Marcus Chen, home">MC<span>.</span></a>
         <nav aria-label="Primary navigation">
           <a href="../index.html">Home</a>
-          <a href="../index.html#miscellaneous">Selected projects</a>
           <a href="../academic-activities/index.html">Activities</a>
+          <a href="#notes-explorations">Notes &amp; Explorations</a>
+          <a href="#resources">Resources</a>
         </nav>
       </div>
     </header>
 
     <main class="inner-page shell">
       <div class="page-intro">
-        <p class="eyebrow">Unpublished work</p>
+        <p class="eyebrow">Notes &amp; resources</p>
         <h1>Miscellaneous</h1>
-        <p>Informal investigations, computational experiments, and small research projects that are interesting even before publication.</p>
-        <a class="back-link" href="../index.html#miscellaneous">← Back to selected projects</a>
+        <p>Mathematical notes, exploratory projects, and a collection of references and learning resources.</p>
+        <a class="back-link" href="../index.html#miscellaneous">← Back to Miscellaneous</a>
       </div>
 
-      <!-- EDIT: Copy one collection-item for each small project. -->
-      <div class="collection-list">
-        <article class="collection-item">
-          <p class="card-meta">Small study · Ongoing</p>
-          <h2>Visual Experiments with Hyperbolic Tilings</h2>
-          <p>A collection of computational sketches testing how local choices in a fundamental polygon affect the global tiling. The project is exploratory and may evolve into a longer note.</p>
-          <div class="item-links"><a href="#">Notes / files ↗</a></div>
-        </article>
-        <article class="collection-item">
-          <p class="card-meta">Notebook · 2026</p>
-          <h2>Searching for Extremal Monomial Ratios</h2>
-          <p>Small-scale experiments suggest several extremal patterns for neighboring monomials. This page records the evidence, failed approaches, and open questions.</p>
-          <div class="item-links"><a href="#">Notes / files ↗</a></div>
-        </article>
-        <article class="collection-item">
-          <p class="card-meta">Reading project · 2025</p>
-          <h2>Low-dimensional Examples in Discrete Convexity</h2>
-          <p>Worked examples compare several notions of log-concavity and expose where common implications fail. The examples are intended as a reference for future work.</p>
-          <div class="item-links"><a href="#">Notes / files ↗</a></div>
-        </article>
-        <article class="collection-item">
-          <p class="card-meta">Problem collection · 2025</p>
-          <h2>Questions Around Mapping Class Group Actions</h2>
-          <p>A short collection of concrete questions arising from a reading group. It includes small cases, diagrams, and partial observations rather than publication-ready results.</p>
-          <div class="item-links"><a href="#">Notes / files ↗</a></div>
-        </article>
-      </div>
+      <section class="publication-category" id="notes-explorations" aria-labelledby="notes-explorations-title">
+        <details class="notes-details">
+              <summary><h2 class="publication-category-title" id="notes-explorations-title">Notes &amp; Explorations</h2></summary>
+        <!-- EDIT: Copy one collection-item for each small project. -->
+        <div class="collection-list">
+<article class="collection-item" id="quadratic-lorentzian-closure">
+  <p class="card-meta">Expository note · 5 pages</p>
+  <h3><a href="notes/quadratic-lorentzian-closure.pdf">The Quadratic Lorentzian Cone: A Self-Contained Proof of the Closure Property</a></h3>
+  <p>An independently developed proof using Perron–Frobenius theory, explicit perturbations, and Schur complements, written during a reading group on Brändén and Huh’s <i>Lorentzian Polynomials</i> under the guidance of Botong Wang.</p>
+  <p class="notes-acknowledgment"><small><strong>A shorter argument, shared by Petter Brändén in a private conversation.</strong> For a nonzero entrywise nonnegative symmetric matrix <i>A</i> with at most one positive eigenvalue, let <i>J</i> be the all-ones matrix and set <span class="inline-math"><i>A</i>(<i>s</i>) = (<i>I</i> + <i>sJ</i>)<i>A</i>(<i>I</i> + <i>sJ</i>)</span>, <i>s</i> &gt; 0. This invertible congruence preserves inertia by Sylvester’s law, while making every entry strictly positive; moreover, <i>A</i>(<i>s</i>) tends to <i>A</i> as <i>s</i> tends to zero. The zero matrix is approximated separately by ε<i>J</i> − ε<sup>2</sup><i>I</i>. Brändén also explained the connection with the proof of Theorem 2.13.</small></p>
+  <div class="item-links"><a href="notes/quadratic-lorentzian-closure.pdf">Read note</a></div>
+</article>
+<article class="collection-item" id="spheres-squares-private">
+  <p class="card-meta">Private course notes · Simons School 2026 · 63 pages</p>
+  <h3>Spheres and Squares, Sums and Differences</h3>
+  <p class="item-authors">Personal notes compiled and edited by Dijia Chen, based on lectures by Lillian Pierce.</p>
+  <p>Notes on the circle method, lattice-point counting, sums of squares, and sets with no square differences. These notes have not been reviewed by the lecturer.</p>
+  <p class="notes-acknowledgment"><small>Private working notes; available upon request.</small></p>
+</article>
+<article class="collection-item" id="gowers-norms-private">
+  <p class="card-meta">Private problem-session notes · Simons School 2026 · 51 pages</p>
+  <h3>Gowers Norms and Their Applications — Problem Sessions</h3>
+  <p class="item-authors">Solutions and reflections by Dijia Chen on problems from Joni Teräväinen’s course.</p>
+  <p>Worked solutions and reflections from the first three problem sessions, covering Gowers norms, multiplicative functions, and ergodic theory. The problems are due to Joni Teräväinen; any errors in the solutions are my own.</p>
+  <p class="notes-acknowledgment"><small>Private working notes; available upon request.</small></p>
+</article>
+<article class="collection-item" id="several-complex-variables-notes">
+  <p class="card-meta">Course notes · MATH 823 · 111 pages</p>
+  <h3><a href="notes/several-complex-variables-math823.pdf">Several Complex Variables — Course Notes (MATH 823)</a></h3>
+  <p class="item-authors">Notes compiled and edited by Dijia Chen, based on lectures by Xianghong Gong.</p>
+  <p>Notes on holomorphic functions in several variables, the <span aria-label="d-bar">∂̄</span>-equation, pseudoconvexity, and <i>L</i><sup>2</sup> methods, with additional material on extension theorems and complex manifolds. Some advanced results are presented with proof sketches.</p>
+  <p class="notes-acknowledgment"><small>I thank Professor Xianghong Gong and my classmates for the original notes; all errors in this compilation are my responsibility.</small></p>
+  <div class="item-links"><a href="notes/several-complex-variables-math823.pdf">Read notes</a></div>
+</article>
+
+          <article class="collection-item">
+            <p class="card-meta">Small study · Ongoing</p>
+            <h3>Visual Experiments with Hyperbolic Tilings</h3>
+            <p>A collection of computational sketches testing how local choices in a fundamental polygon affect the global tiling. The project is exploratory and may evolve into a longer note.</p>
+            <div class="item-links"><a href="#">Notes / files ↗</a></div>
+          </article>
+          <article class="collection-item">
+            <p class="card-meta">Notebook · 2026</p>
+            <h3>Searching for Extremal Monomial Ratios</h3>
+            <p>Small-scale experiments suggest several extremal patterns for neighboring monomials. This page records the evidence, failed approaches, and open questions.</p>
+            <div class="item-links"><a href="#">Notes / files ↗</a></div>
+          </article>
+          <article class="collection-item">
+            <p class="card-meta">Reading project · 2025</p>
+            <h3>Low-dimensional Examples in Discrete Convexity</h3>
+            <p>Worked examples compare several notions of log-concavity and expose where common implications fail. The examples are intended as a reference for future work.</p>
+            <div class="item-links"><a href="#">Notes / files ↗</a></div>
+          </article>
+          <article class="collection-item">
+            <p class="card-meta">Problem collection · 2025</p>
+            <h3>Questions Around Mapping Class Group Actions</h3>
+            <p>A short collection of concrete questions arising from a reading group. It includes small cases, diagrams, and partial observations rather than publication-ready results.</p>
+            <div class="item-links"><a href="#">Notes / files ↗</a></div>
+          </article>
+        </div>
+        </details>
+            </section>
+
+      <section class="publication-category" id="resources" aria-labelledby="resources-title">
+        <details class="notes-details resources-details">
+        <summary><h2 class="publication-category-title" id="resources-title">Resources</h2></summary>
+        <!-- Add references, reading lists, or links to mathematical resources here. -->
+        <div class="collection-list">
+          <article class="collection-item">
+            <p class="card-meta">Course resource · MATH 765 · Spring 2026</p>
+            <h3><a href="https://people.math.wisc.edu/~awaldron3/Notes/765%20notes%20051826.pdf">Differential Geometry — MATH 765, Spring 2026</a></h3>
+            <p class="item-authors">Lecture notes by Alex Waldron. I contributed some of the initial lecture drafts.</p>
+            <p>Lecture notes covering Riemannian metrics, connections, curvature, geodesics, and comparison theorems.</p>
+            <div class="item-links"><a href="https://people.math.wisc.edu/~awaldron3/Notes/765%20notes%20051826.pdf">Read at source</a></div>
+          </article>
+        </div>
+        </details>
+      </section>
     </main>
 
     <footer class="site-footer">
-      <div class="shell footer-inner"><p>© 2026 Marcus Chen</p><p>Last updated August 2026</p></div>
+      <div class="shell footer-inner"><p>© 2026 Marcus Chen</p><p>Last updated: <time datetime="2026-11-13">November 13, 2026</time></p></div>
     </footer>
   </body>
 </html>

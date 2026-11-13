@@ -43,6 +43,7 @@ a:focus-visible {
 h1,
 h2,
 h3,
+h4,
 p,
 figure {
   margin-top: 0;
@@ -50,7 +51,8 @@ figure {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   color: var(--ink);
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 500;
@@ -136,7 +138,7 @@ h3 {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(144px, 18vw, 190px);
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
   gap: clamp(24px, 4vw, 48px);
   padding-block: clamp(28px, 4vw, 44px);
@@ -167,12 +169,66 @@ h3 {
 }
 
 .hero-intro {
-  max-width: 650px;
+  max-width: none;
   margin-bottom: 12px;
   color: #4d555d;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1rem, 1.5vw, 1.08rem);
   line-height: 1.7;
+}
+
+.research-interests {
+  margin-block: 24px 20px;
+}
+
+.research-interests > h2 {
+  margin-bottom: 12px;
+  font-size: 1.35rem;
+}
+
+.research-details {
+  border-top: 1px solid var(--line);
+}
+
+.research-details:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.research-details > summary {
+  padding-block: 12px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.research-details > summary:hover {
+  color: var(--link);
+}
+
+.research-details > summary:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+.research-details-content {
+  padding-bottom: 14px;
+}
+
+.research-details-content > :last-child {
+  margin-bottom: 0;
+}
+
+.recent-interests ul {
+  margin: 0;
+  padding-inline-start: 22px;
+  color: #4d555d;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1rem, 1.5vw, 1.08rem);
+  line-height: 1.7;
+}
+
+.recent-interests li + li {
+  margin-top: 8px;
 }
 
 .contact-list {
@@ -279,6 +335,25 @@ h3 {
   font-size: clamp(1.55rem, 2.6vw, 2.15rem);
 }
 
+.background-section {
+  display: block;
+}
+
+.background-content {
+  margin-top: 16px;
+  padding-inline-start: 28px;
+}
+
+.background-content h3 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.background-content p {
+  margin-bottom: 0;
+}
+
 .section-title-link {
   text-decoration: none;
 }
@@ -328,7 +403,7 @@ h3 {
 
 .timeline-item h3,
 .list-card h3,
-.showcase-item h3 {
+.showcase-item :is(h3, h4) {
   margin-bottom: 4px;
   font-size: 1.16rem;
 }
@@ -375,7 +450,7 @@ h3 {
   margin-bottom: 0;
 }
 
-.showcase-item h3,
+.showcase-item :is(h3, h4),
 .showcase-item .item-authors,
 .showcase-item > p:last-child {
   grid-column: 2;
@@ -383,6 +458,70 @@ h3 {
 
 .showcase-item > p:last-child {
   max-width: 680px;
+}
+
+.showcase-item .abstract-details,
+.showcase-item .item-links {
+  grid-column: 2;
+}
+
+.showcase-item .paper-keywords,
+.collection-item .paper-keywords {
+  grid-column: 2;
+  margin-block: 2px 8px;
+  color: #59616a;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.paper-keywords > span {
+  font-weight: 600;
+}
+
+.collection-item .abstract-details {
+  grid-column: 2;
+}
+
+.abstract-details > summary {
+  width: fit-content;
+  padding-block: 4px;
+  color: var(--link);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.abstract-details > summary:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.abstract-details > summary:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+.abstract-details .paper-abstract {
+  margin-block: 8px 12px;
+  color: var(--muted);
+}
+
+.paper-abstract .inline-math {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  vertical-align: middle;
+}
+
+.paper-abstract .inline-math::-webkit-scrollbar {
+  display: none;
+}
+
+.paper-abstract math {
+  font-size: 1em;
 }
 
 .showcase-list:not(:has(> .showcase-item)) {
@@ -393,7 +532,7 @@ h3 {
   padding-block: 8px;
 }
 
-.showcase-list-compact .showcase-item h3 {
+.showcase-list-compact .showcase-item :is(h3, h4) {
   font-size: 1.18rem;
 }
 
@@ -414,6 +553,24 @@ h3 {
 .activity-group > h3 {
   margin-bottom: 6px;
   font-size: 1.16rem;
+}
+
+.activity-group.activity-featured {
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.activity-group.activity-featured > h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.activity-page-group.activity-featured .subpage-heading h2 {
+  font-weight: 600;
+}
+
+.activity-page-group:not(.activity-featured) .subpage-heading h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
 }
 
 .activity-group > h3 a {
@@ -477,6 +634,23 @@ h3 {
   font-size: 0.88rem;
   font-weight: 650;
   text-decoration: none;
+}
+
+.publication-category + .publication-category {
+  margin-top: 32px;
+}
+
+.publication-category-title {
+  margin-bottom: 14px;
+  font-size: clamp(1.4rem, 2.3vw, 1.85rem);
+}
+
+.publication-empty {
+  margin: 0;
+  padding-block: 12px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 .collection-list {
@@ -683,7 +857,7 @@ h3 {
 
 @media (min-width: 901px) {
   .activity-groups {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .activity-groups > .section-action {
@@ -760,13 +934,18 @@ h3 {
 
   .timeline-item .timeline-date,
   .showcase-item .card-meta,
-  .showcase-item h3,
+  .showcase-item :is(h3, h4),
   .showcase-item .item-authors,
+  .showcase-item .abstract-details,
+  .showcase-item .paper-keywords,
+  .showcase-item .item-links,
   .showcase-item > p:last-child,
   .collection-item .card-meta,
   .collection-item h2,
   .collection-item h3,
   .collection-item .item-authors,
+  .collection-item .abstract-details,
+  .collection-item .paper-keywords,
   .collection-item > p:not(.card-meta),
   .collection-item .item-links {
     grid-column: 1;
@@ -835,5 +1014,250 @@ h3 {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+}
+
+/* Collapsible notes and a compact attribution. */
+.notes-details > summary {
+  cursor: pointer;
+  margin-bottom: 14px;
+}
+
+.notes-details > summary .publication-category-title {
+  display: inline;
+  margin-bottom: 0;
+}
+
+.notes-details > summary:hover {
+  color: var(--link);
+}
+
+.notes-details > summary:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 4px;
+}
+
+.showcase-item > p:not(.card-meta) {
+  grid-column: 2;
+}
+
+.notes-acknowledgment {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.notes-acknowledgment small {
+  font-size: 0.78rem;
+}
+
+@media (max-width: 760px) {
+  .showcase-item > p:not(.card-meta) {
+    grid-column: 1;
+  }
+}
+
+/* Talks are organized by date, with details tucked below each occasion. */
+.talk-category-title {
+  margin-block: 26px 10px;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.talk-entry {
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 24px;
+}
+
+.talk-entry > summary {
+  position: relative;
+  display: grid;
+  grid-template-columns: 155px minmax(0, 1fr);
+  gap: 6px 18px;
+  padding: 10px 0 10px 22px;
+  list-style: none;
+  cursor: pointer;
+  line-height: 1.6;
+}
+
+.talk-entry > summary::-webkit-details-marker {
+  display: none;
+}
+
+.talk-entry > summary::before {
+  content: "▸";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 10px;
+  color: var(--muted);
+}
+
+.talk-entry[open] > summary::before {
+  content: "▾";
+}
+
+.talk-entry > summary:hover {
+  color: var(--link);
+}
+
+.talk-entry > summary:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 3px;
+}
+
+.talk-date {
+  font-size: 0.88rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.talk-venue {
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.talk-research .talk-date {
+  font-weight: 600;
+}
+
+.talk-research .talk-venue {
+  color: #46515a;
+}
+
+.talk-content {
+  margin: 0 0 18px 22px;
+  padding-inline-start: 16px;
+  border-inline-start: 2px solid var(--line);
+  max-width: 790px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.talk-title {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.talk-content > p {
+  margin-bottom: 10px;
+}
+
+.talk-reference {
+  font-size: 0.8rem;
+}
+
+.activity-page-group.activity-featured .subpage-heading h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .talk-entry > summary {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+  }
+}
+
+.paper-update {
+  margin-bottom: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.paper-update small {
+  font-size: 0.82rem;
+}
+
+/* Category headings reveal their contents on demand. */
+.category-disclosure > summary {
+  cursor: pointer;
+  margin-bottom: 0;
+  padding-block: 4px;
+}
+
+.category-disclosure[open] > summary {
+  margin-bottom: 14px;
+}
+
+.category-disclosure > summary > :is(h2, h3) {
+  display: inline;
+  margin: 0;
+}
+
+.category-disclosure > summary:hover,
+.category-disclosure > summary:hover > :is(h2, h3) {
+  color: var(--link);
+}
+
+.category-disclosure > summary:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 4px;
+}
+
+.activity-group .activity-disclosure > summary > h3 {
+  font-size: 1.16rem;
+}
+
+.activity-group.activity-featured .activity-disclosure > summary > h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.activity-page-group .activity-disclosure > summary > h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.activity-page-groups {
+  gap: 28px;
+}
+
+/* A few photographs beyond mathematics, shown in their original proportions. */
+.life-intro {
+  max-width: 760px;
+  margin-bottom: 24px;
+  color: var(--muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.life-gallery {
+  display: grid;
+  grid-template-columns: 1.4fr 1.2fr 0.75fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.life-gallery figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.life-gallery a,
+.life-gallery img {
+  display: block;
+  width: 100%;
+}
+
+.life-gallery img {
+  height: auto;
+}
+
+.life-gallery figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+@media (max-width: 600px) {
+  .life-gallery {
+    grid-template-columns: 1fr 0.8fr;
+    gap: 20px 14px;
+  }
+
+  .life-gallery figure:first-child {
+    grid-column: 1 / -1;
   }
 }
