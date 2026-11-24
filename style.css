@@ -1261,3 +1261,37 @@ h4 {
     grid-column: 1 / -1;
   }
 }
+
+/* A discreet list of coauthors at the foot of the homepage. */
+.footer-collaborators {
+  margin-block: 0;
+  padding-bottom: 22px;
+  color: var(--muted);
+  font-size: 0.74rem;
+  line-height: 1.9;
+}
+
+.footer-collaborators a,
+.footer-collaborators > span:not(.collaborator-separator) {
+  white-space: nowrap;
+}
+
+.footer-collaborators a {
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 0.2em;
+}
+
+.footer-collaborators a:hover {
+  color: var(--link);
+  text-decoration-color: currentColor;
+}
+
+.collaborators-label {
+  margin-right: 5px;
+  font-weight: 500;
+}
+
+.collaborator-separator {
+  padding-inline: 3px;
+}
